@@ -1,5 +1,5 @@
 import {Component} from "react";
-import Pages from "./Constants";
+import Pages from "../Constants";
 import Navbar from "../components/Navbar";
 
 export class About extends Component{

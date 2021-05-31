@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import PhotoNode from "../components/PhotoNode";
 import {Link} from "react-router-dom";
 import Navbar from "../components/Navbar";
-import Pages from "./Constants";
+import Pages from "../Constants";
+import Manage from "../components/Manage";
 
 
 
@@ -47,6 +48,8 @@ export class Home extends Component{
                 <div className='Photos'>
                     {album}
                 </div>
+
+                <Manage/>
             </div>
 
         );

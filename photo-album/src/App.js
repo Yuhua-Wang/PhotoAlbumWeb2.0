@@ -8,6 +8,7 @@ import {
 import './App.css';
 import Home from './pages/Home'
 import About from './pages/About';
+import Manage from "./components/Manage";
 
 function App() {
   return (
