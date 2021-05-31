@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import PhotoNode from "../components/PhotoNode";
-import Navbar from "../components/Navbar";
 import {Link} from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 
 
@@ -42,7 +42,7 @@ export class Home extends Component{
         return (
             <div id='Home'>
                 <h1>Photo Album</h1>
-                <Navbar/>
+                <Navbar current='Home'/>
                 <div className='Photos'>
                     {album}
                 </div>
