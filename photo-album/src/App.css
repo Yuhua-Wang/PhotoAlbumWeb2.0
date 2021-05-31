@@ -1,0 +1,130 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  color: #2957bf;
+  font-family: Cursive;
+  text-align: center;
+  font-size: 300%;
+}
+
+.navigator {
+  overflow: hidden;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  width: 80vw;
+  height: 50px;
+  background-color: #a1a1a5;
+  position:relative;
+}
+
+.navigator a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 10px 4%;
+  font-size: 30px;
+}
+
+.navigator a:hover {
+  background-color: #5783e7;
+  color: white;
+}
+
+.navigator a.active {
+  background-color: #2957bf;
+  color: white;
+}
+
+.Photos {
+  overflow: hidden;
+  margin-top: 1vw;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  width: 80vw;
+  position:relative;
+}
+
+.PhotoNode {
+  margin-bottom: 50px;
+  background-color: #e7e7e7;
+  width: 80vw;
+  height: 70vh;
+}
+
+.image {
+  float: left;
+  width: 60vw;
+  height: 70vh;
+  transition: 0.7s;
+}
+
+.textRegion {
+  float: left;
+  margin-top: 1vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  background-color: #ffffff;
+  height: 63vh;
+  width: 18vw;
+  overflow: hidden;
+}
+
+.removePhoto {
+  float: left;
+  height: 4vh;
+  width: 8vw;
+  margin-left: 6vw;
+  margin-right: 5vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  overflow: hidden;
+}
+
+.photoTitle {
+  font-size: 200%;
+  overflow: auto;
+}
+
+.photoDescription {
+  font-size: 150%;
+  overflow: auto;
+}
+
+
