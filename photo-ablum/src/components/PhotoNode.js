@@ -1,9 +1,14 @@
+
+
 function PhotoNode(title, description, url) {
     return (
         <div className='PhotoNode'>
-            <img src={url}/>
-            <h2>{title}</h2>
-            <p>{description}</p>
+            <img className='image' src={url}/>
+            <div className='textRegion'>
+                <b className='photoTitle'>{title}</b>
+                <p className='photoDescription'>{description}</p>
+            </div>
+            <button type='button' className='removePhoto'>Remove</button>
         </div>
     );
 }
