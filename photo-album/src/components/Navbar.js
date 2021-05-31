@@ -1,14 +1,15 @@
 import {Link} from "react-router-dom";
+import Pages from "../pages/Constants";
 
-let current = 'Home';
+let current = Pages.HOME;
 
 function Navbar(props) {
     current = props.current;
 
     return (
         <div className='navigator'>
-            <Link exact to='/' className = {checkActive('Home')? 'active' : ''}>Home</Link>
-            <Link exact to='/About' className = {checkActive('About')? 'active' : ''}>About</Link>
+            <Link exact to='/' className = {checkActive(Pages.HOME)? 'active' : ''}>Home</Link>
+            <Link exact to='/About' className = {checkActive(Pages.ABOUT)? 'active' : ''}>About</Link>
         </div>
     );
 }
