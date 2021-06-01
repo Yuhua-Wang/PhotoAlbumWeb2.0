@@ -28,23 +28,18 @@ export class Home extends Component{
             }
         ]
     });
+    database = JSON.parse(this.database_json);
     state = {
-        photos:[]
+        photos:this.database.photos
     }
 
     removePhoto(index) {
         let newPhotos = Object.assign([], this.state.photos);
-        newPhotos.slice(index, 1)
-        this.setState({photos:newPhotos})
+        newPhotos.splice(index, 1);
+        this.setState({photos:newPhotos});
     }
 
     render() {
-        let database = JSON.parse(this.database_json);
-        let size = database.size;
-        let photos = database.photos;
-        // this.setState({photos:photos})
-        this.state.photos = photos;
-
         return (
             <div id='Home'>
                 <h1>Photo Album</h1>
@@ -56,8 +51,8 @@ export class Home extends Component{
                             title={photo.title}
                             description={photo.description}
                             url={photo.URL}
-                            removePhoto={this.removePhoto.bind(this, index)}
-                        />)})}
+                            removePhoto={this.removePhoto.bind(this,index)}/>
+                        )})}
                 </div>
 
                 <Manage/>
@@ -65,6 +60,7 @@ export class Home extends Component{
 
         );
     }
+
 }
 
 export default Home;
