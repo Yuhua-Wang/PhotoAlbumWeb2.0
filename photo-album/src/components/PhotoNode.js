@@ -1,15 +1,12 @@
 
 
 function PhotoNode(props) {
-    let url = props.url;
-    let title = props.title;
-    let description = props.description;
     return (
         <div className='PhotoNode'>
-            <img className='image' src={url}/>
+            <img className='image' src={props.url}/>
             <div className='textRegion'>
-                <b className='photoTitle'>{title}</b>
-                <p className='photoDescription'>{description}</p>
+                <b className='photoTitle'>{props.title}</b>
+                <p className='photoDescription'>{props.description}</p>
             </div>
             <button type='button' className='removePhoto' onClick={props.removePhoto}>Remove</button>
         </div>

@@ -127,4 +127,32 @@ h1 {
   overflow: auto;
 }
 
+label {
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+#upload {
+  width: 80vw;
+  margin-top: 2vh;
+  margin-right: 10vw;
+  margin-left: 10vw;
+}
+
+form {
+  float: left;
+  margin-top: 4vh;
+  margin-left: 10vw;
+  margin-bottom: 5vh;
+}
+
+#deleteAll {
+  margin-top: 15vh;
+  margin-left: 10vw;
+  float: left;
+  background-color: Red;
+  color: white;
+  font-size: 150%;
+}
+
 

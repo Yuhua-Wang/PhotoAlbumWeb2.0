@@ -1,10 +1,11 @@
 import React, {Component} from "react";
 import PhotoNode from "../components/PhotoNode";
-import {Link} from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Pages from "../Constants";
 import Manage from "../components/Manage";
 
+// The mechanism for removing/adding components dynamically is inspired by:
+// https://blog.csdn.net/weixin_30760895/article/details/97354604
 
 export class Home extends Component{
     database_json = JSON.stringify({
@@ -33,32 +34,40 @@ export class Home extends Component{
         photos:this.database.photos
     }
 
-    removePhoto(index) {
-        let newPhotos = Object.assign([], this.state.photos);
-        newPhotos.splice(index, 1);
-        this.setState({photos:newPhotos});
-    }
-
     render() {
         return (
-            <div id='Home'>
+            <div id='home'>
                 <h1>Photo Album</h1>
                 <Navbar current={Pages.HOME}/>
                 <div className='Photos'>
                     {this.state.photos.map((photo,index)=>{
                         return (
                             <PhotoNode
-                            title={photo.title}
-                            description={photo.description}
-                            url={photo.URL}
-                            removePhoto={this.removePhoto.bind(this,index)}/>
+                                title={photo.title}
+                                description={photo.description}
+                                url={photo.URL}
+                                removePhoto={this.removePhoto.bind(this,index)}/>
                         )})}
                 </div>
 
-                <Manage/>
+                <Manage upload={this.upload.bind(this)} deleteAll={this.deleteAll.bind(this)}/>
             </div>
 
         );
+    }
+
+    upload(){
+
+    }
+
+    removePhoto(index) {
+        let newPhotos = Object.assign([], this.state.photos);
+        newPhotos.splice(index, 1);
+        this.setState({photos:newPhotos});
+    }
+
+    deleteAll() {
+        this.setState({photos:[]});
     }
 
 }
