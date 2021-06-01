@@ -26,15 +26,15 @@ export class Manage extends Component{
                 <Navbar current={Pages.MANAGE}/>
 
                 <div id='upload'>
-                    <form onSubmit={this.handleUpload}>
+                    <form>
                         <label >Title:</label>
                         <input type="text" size="50" value={this.state.title} onChange={this.changeTitle.bind(this)}/><br/><br/>
                         <label htmlFor="url">URL: </label>
                         <input type="url" size="50" value={this.state.url} onChange={this.changeURL.bind(this)}/><br/><br/>
                         <label >Description: </label>
                         <textarea rows="10" cols="50" value={this.state.description} onChange={this.changeDescription.bind(this)}/><br/><br/>
-                        <input type="submit" value="Upload a New Photo"/>
-                        <button type="reset" onClick={this.resetInput.bind(this)}>Clear Inputs</button>
+                        <button type="button" onClick={this.handleUpload.bind(this)}>Upload Photo</button>
+                        <button type="button" onClick={this.resetInput.bind(this)}>Clear Inputs</button>
                     </form>
                 </div>
 
@@ -44,7 +44,8 @@ export class Manage extends Component{
     }
 
     handleUpload(){
-        alert(this.state.url);
+        this.props.upload(this.state.title, this.state.url, this.state.description);
+        this.resetInput();
     }
 
     resetInput(){

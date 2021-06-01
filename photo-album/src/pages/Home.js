@@ -56,8 +56,16 @@ export class Home extends Component{
         );
     }
 
-    upload(){
-
+    upload(title, url, description){
+        let newPhotos = Object.assign([], this.state.photos);
+        newPhotos.push(
+            {
+                title: title,
+                URL: url,
+                description: description
+            }
+        )
+        this.setState({photos:newPhotos});
     }
 
     removePhoto(index) {
