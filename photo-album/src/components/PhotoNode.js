@@ -1,6 +1,9 @@
 
 
-function PhotoNode(title, description, url) {
+function PhotoNode(props) {
+    let url = props.url;
+    let title = props.title;
+    let description = props.description;
     return (
         <div className='PhotoNode'>
             <img className='image' src={url}/>
@@ -8,7 +11,7 @@ function PhotoNode(title, description, url) {
                 <b className='photoTitle'>{title}</b>
                 <p className='photoDescription'>{description}</p>
             </div>
-            <button type='button' className='removePhoto'>Remove</button>
+            <button type='button' className='removePhoto' onClick={props.removePhoto}>Remove</button>
         </div>
     );
 }
