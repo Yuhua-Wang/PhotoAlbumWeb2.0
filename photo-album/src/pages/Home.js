@@ -43,6 +43,7 @@ export class Home extends Component{
                     {this.state.photos.map((photo,index)=>{
                         return (
                             <PhotoNode
+                                key={index}
                                 title={photo.title}
                                 description={photo.description}
                                 url={photo.URL}

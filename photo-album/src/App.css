@@ -106,12 +106,25 @@ h1 {
   overflow: hidden;
 }
 
-.removePhoto {
+.viewDetail {
+  display: inline-block;
   float: left;
   height: 4vh;
-  width: 8vw;
-  margin-left: 6vw;
-  margin-right: 5vw;
+  width: 5vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  overflow: hidden;
+}
+
+.removePhoto {
+  display: inline-block;
+  float: right;
+  height: 4vh;
+  width: 5vw;
+  margin-left: 0vw;
+  margin-right: 3vw;
   margin-top: 1vh;
   margin-bottom: 1vh;
   overflow: hidden;
@@ -153,6 +166,26 @@ form {
   background-color: Red;
   color: white;
   font-size: 150%;
+}
+
+.detailedView {
+  background: white;
+  position: fixed;
+  width: 60vw;
+  height: 40vh;
+  top: 10%;
+  left: 15%;
+}
+
+#aboutText{
+  overflow: hidden;
+  margin-top: 1vw;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  width: 80vw;
+  height: 70vh;
+  position:relative;
+  font-size: 200%;
 }
 
 
