@@ -26,7 +26,7 @@ export class Manage extends Component{
                 <Navbar current={Pages.MANAGE}/>
 
                 <div id='upload'>
-                    <form>
+                    <form id='inputForm'>
                         <label >Title:</label>
                         <input type="text" size="50" value={this.state.title} onChange={this.changeTitle.bind(this)}/><br/><br/>
                         <label htmlFor="url">URL: </label>

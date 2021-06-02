@@ -152,7 +152,7 @@ label {
   margin-left: 10vw;
 }
 
-form {
+#inputForm {
   float: left;
   margin-top: 4vh;
   margin-left: 10vw;
@@ -171,10 +171,28 @@ form {
 .detailedView {
   background: white;
   position: fixed;
-  width: 60vw;
-  height: 40vh;
+  width: 40vw;
+  height: 70vh;
   top: 10%;
-  left: 15%;
+  left: 25%;
+  border-color: #2957bf;
+  border-style: solid;
+  border-width: thick;
+  z-index: 999;
+}
+
+.detailedView form{
+  float: bottom;
+  margin-top: 4vh;
+  margin-left: 8vw;
+  margin-bottom: 5vh;
+}
+
+.detailedView b {
+  text-align: center;
+  color: #2957bf;
+  font-family: Cursive, cursive;
+  font-size: 200%;
 }
 
 #aboutText{
@@ -187,5 +205,7 @@ form {
   position:relative;
   font-size: 200%;
 }
+
+textarea { resize: none; }
 
 
