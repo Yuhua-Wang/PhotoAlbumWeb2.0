@@ -13,10 +13,10 @@ import Manage from "./components/Manage";
 function App() {
   return (
       <Router>
-          <switch>
+          <Switch>
               <Route exact path='/' component={Home}/>
               <Route exact path='/About' component={About}/>
-          </switch>
+          </Switch>
       </Router>
 
   );
