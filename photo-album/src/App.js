@@ -8,18 +8,17 @@ import {
 import './App.css';
 import Home from './pages/Home'
 import About from './pages/About';
-import Manage from "./components/Manage";
 
 function App() {
-  return (
-      <Router>
-          <Switch>
-              <Route exact path='/' component={Home}/>
-              <Route exact path='/About' component={About}/>
-          </Switch>
-      </Router>
 
-  );
+    return (
+        <Router>
+            <Switch>
+                <Route exact path='/' component={Home}/>
+                <Route exact path='/About' component={About}/>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
