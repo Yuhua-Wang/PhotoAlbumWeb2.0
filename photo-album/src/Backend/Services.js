@@ -1,6 +1,11 @@
 export function getPhotosRequest() {
     return fetch('/photos')
-        .then(data => data.json());
+        .then(response => {
+            if (response.ok){
+                return response.json();
+            }
+            alert('Failed to get photos, please try again')
+        });
 }
 
 export function uploadPhotoRequest(newPhoto) {
@@ -11,15 +16,30 @@ export function uploadPhotoRequest(newPhoto) {
         },
         method:'POST',
         body: JSON.stringify(newPhoto),
-    }).then(data => data.json());
+    }).then(response => {
+        if (response.ok){
+            return response.json();
+        }
+        alert('Upload Failed, please try again')
+    });
 }
 
 export function deleteAllRequest() {
-    return fetch('/photos', {method:'DELETE'}).then(data => data.json());
+    return fetch('/photos', {method:'DELETE'}).then(data => data.json()).then(response => {
+        if (response.ok){
+            return response.json();
+        }
+        alert('Delete Failed, please try again')
+    });
 }
 
 export function deletePhotoRequest(index) {
-    return fetch('/photos/'+index, {method:'DELETE'}).then(data => data.json());
+    return fetch('/photos/'+index, {method:'DELETE'}).then(response => {
+        if (response.ok){
+            return response.json();
+        }
+        alert('Delete Failed, please try again')
+    });
 }
 
 export function editPhotoRequest(newPhoto, index) {
@@ -30,5 +50,10 @@ export function editPhotoRequest(newPhoto, index) {
         },
         method:'PUT',
         body: JSON.stringify(newPhoto),
-    }).then(data => data.json());
+    }).then(response => {
+        if (response.ok){
+            return response.json();
+        }
+        alert('Edit Failed, please try again')
+    });
 }
