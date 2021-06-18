@@ -9,17 +9,17 @@ export function uploadPhotoRequest(newPhoto) {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        method:'post',
+        method:'POST',
         body: JSON.stringify(newPhoto),
     }).then(data => data.json());
 }
 
 export function deleteAllRequest() {
-    return fetch('photos', {method:'delete'}).then(data => data.json());
+    return fetch('/photos', {method:'DELETE'}).then(data => data.json());
 }
 
 export function deletePhotoRequest(index) {
-    return fetch('photos/'+index, {method:'delete'}).then(data => data.json());
+    return fetch('/photos/'+index, {method:'DELETE'}).then(data => data.json());
 }
 
 export function editPhotoRequest(newPhoto, index) {
@@ -28,7 +28,7 @@ export function editPhotoRequest(newPhoto, index) {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        method:'patch',
+        method:'PUT',
         body: JSON.stringify(newPhoto),
     }).then(data => data.json());
 }

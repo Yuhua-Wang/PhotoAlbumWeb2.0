@@ -30,14 +30,14 @@ app.get('/photos', (req, res) => {
 
 // add a new photo
 app.post('/photos', (req, res) => {
-    let newPhoto = JSON.parse(req.body);
+    let newPhoto = req.body;
     database.push(newPhoto);
     res.json(database);
 })
 
 // edit a photo
-app.patch('/photos/:index', (req, res) => {
-    database[req.params.index] = JSON.parse(req.body);
+app.put('/photos/:index', (req, res) => {
+    database[req.params.index] = req.body;
     res.json(database);
 })
 

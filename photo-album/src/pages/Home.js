@@ -3,7 +3,13 @@ import PhotoNode from "../components/PhotoNode";
 import Navbar from "../components/Navbar";
 import Pages from "../Constants";
 import Manage from "../components/Manage";
-import {deleteAllRequest, deletePhotoRequest, getPhotosRequest, uploadPhotoRequest} from "../Backend/Services";
+import {
+    deleteAllRequest,
+    deletePhotoRequest,
+    editPhotoRequest,
+    getPhotosRequest,
+    uploadPhotoRequest
+} from "../Backend/Services";
 
 // The mechanism for removing/adding components dynamically is inspired by:
 // https://blog.csdn.net/weixin_30760895/article/details/97354604
@@ -44,19 +50,27 @@ export class Home extends Component{
     }
 
     upload(title, url, description){
-        let newPhotos = {
+        let newPhoto = {
             title: title,
             URL: url,
             description: description
         }
-        uploadPhotoRequest(newPhotos).then( (photos)=>{
+        uploadPhotoRequest(newPhoto).then( (photos)=>{
                 this.setState({photos:photos})
             }
         )
     }
 
-    editPhoto(index) {
-
+    editPhoto(index, title, url, description) {
+        let newPhoto = {
+            title: title,
+            URL: url,
+            description: description
+        }
+        editPhotoRequest(newPhoto, index).then( (photos)=>{
+                this.setState({photos:photos})
+            }
+        );
     }
 
     removePhoto(index) {

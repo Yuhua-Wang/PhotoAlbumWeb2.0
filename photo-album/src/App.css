@@ -157,7 +157,7 @@ label {
   margin-left: 10vw;
 }
 
-#inputForm {
+#uploadForm {
   float: left;
   margin-top: 4vh;
   margin-left: 10vw;
@@ -186,9 +186,12 @@ label {
   z-index: 999;
 }
 
-.detailedView form{
+#closePopup{
+  float: right;
+}
+#editForm{
   float: bottom;
-  margin-top: 4vh;
+  margin-top: 10vh;
   margin-left: 8vw;
   margin-bottom: 5vh;
 }
