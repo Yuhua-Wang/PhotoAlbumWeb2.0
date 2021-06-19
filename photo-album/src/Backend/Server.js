@@ -41,7 +41,7 @@ app.put('/photos/:index', (req, res) => {
 })
 
 // delete all photos
-app.delete('/allPhotos', (req, res) => {
+app.delete('/photos', (req, res) => {
     database = [];
     res.json(database);
 })

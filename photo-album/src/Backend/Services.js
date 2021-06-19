@@ -27,7 +27,7 @@ export function uploadPhotoRequest(newPhoto) {
 }
 
 export function deleteAllRequest() {
-    return fetch('/allPhotos', {method:'DELETE'}).then(response => {
+    return fetch('/photos', {method:'DELETE'}).then(response => {
         if (response.ok){
             return response.json();
         }
