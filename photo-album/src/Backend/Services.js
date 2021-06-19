@@ -3,8 +3,10 @@ export function getPhotosRequest() {
         .then(response => {
             if (response.ok){
                 return response.json();
+            } else {
+                alert('Failed to get photos, please try again');
+                return [];
             }
-            alert('Failed to get photos, please try again')
         });
 }
 
@@ -25,7 +27,7 @@ export function uploadPhotoRequest(newPhoto) {
 }
 
 export function deleteAllRequest() {
-    return fetch('/photos', {method:'DELETE'}).then(data => data.json()).then(response => {
+    return fetch('/allPhotos', {method:'DELETE'}).then(response => {
         if (response.ok){
             return response.json();
         }
