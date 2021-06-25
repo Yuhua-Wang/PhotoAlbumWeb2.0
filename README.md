@@ -25,7 +25,7 @@ Start the frontend in another terminal:
 ```sh
 npm start
 ```
-Now you are all set, open any browser type below in the address bar:
+Now you are all set, open any browser and type below in the address bar:
 ```sh
 http://localhost:3000/
 ```
