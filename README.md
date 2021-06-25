@@ -1,6 +1,6 @@
 # Photo Album Web Application
 
-This is a web application developed for UBC CPSC455 2021S. It allows users to add, display, edit, and delete photos and images.
+This is a web application developed for UBC CPSC455 2021S. It allows users to add, display, edit, and delete photos and images.  <br/><br/>
 Technologies used in the project includes: React, Node.js, Express
 
 ## Overview
