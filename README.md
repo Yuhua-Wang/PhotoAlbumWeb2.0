@@ -5,11 +5,11 @@ Technologies used in the project includes: React, Node.js, Express
 
 ## Overview
 
-Home page:
+- Home page:
 ![image](https://user-images.githubusercontent.com/45861466/123400896-d352c000-d5d8-11eb-8361-baff66e28688.png)
-Edit Window:
+- Edit Window:
 ![image](https://user-images.githubusercontent.com/45861466/123400507-6a6b4800-d5d8-11eb-9fb3-f41c67bd9426.png)
-Management Section:
+- Management Section:
 ![image](https://user-images.githubusercontent.com/45861466/123400445-59223b80-d5d8-11eb-88c8-2cee3d4606d9.png)
 
 ## Get Started
