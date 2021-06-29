@@ -31,15 +31,15 @@ export class Home extends Component{
                 <h1>Photo Album</h1>
                 <Navbar current={Pages.HOME}/>
                 <div className='Photos'>
-                    {this.state.photos.map((photo,index)=>{
+                    {this.state.photos.map((photo)=>{
                         return (
                             <PhotoNode
-                                key={index}
+                                key={photo._id}
                                 title={photo.title}
                                 description={photo.description}
                                 url={photo.URL}
-                                editPhoto={this.editPhoto.bind(this,index)}
-                                removePhoto={this.removePhoto.bind(this,index)}/>
+                                editPhoto={this.editPhoto.bind(this,photo._id)}
+                                removePhoto={this.removePhoto.bind(this,photo._id)}/>
                         )})}
                 </div>
 
@@ -61,20 +61,20 @@ export class Home extends Component{
         )
     }
 
-    editPhoto(index, title, url, description) {
+    editPhoto(id, title, url, description) {
         let newPhoto = {
             title: title,
             URL: url,
             description: description
         }
-        editPhotoRequest(newPhoto, index).then( (photos)=>{
+        editPhotoRequest(newPhoto, id).then( (photos)=>{
                 this.setState({photos:photos})
             }
         );
     }
 
-    removePhoto(index) {
-        deletePhotoRequest(index).then( (photos)=>{
+    removePhoto(id) {
+        deletePhotoRequest(id).then( (photos)=>{
             this.setState({photos:photos});
         })
     }

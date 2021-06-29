@@ -9,9 +9,9 @@ function Navbar(props) {
 
     return (
         <div className='navigator'>
-            <HashLink exact to='/#home' className = {checkActive(Pages.HOME)? 'active' : ''}>Home</HashLink>
-            <HashLink exact to='/#manage' className = {checkActive(Pages.MANAGE)? 'active' : ''}>Manage</HashLink>
-            <Link exact to='/About' className = {checkActive(Pages.ABOUT)? 'active' : ''}>About</Link>
+            <HashLink to='/#home' className = {checkActive(Pages.HOME)? 'active' : ''}>Home</HashLink>
+            <HashLink to='/#manage' className = {checkActive(Pages.MANAGE)? 'active' : ''}>Manage</HashLink>
+            <Link to='/About' className = {checkActive(Pages.ABOUT)? 'active' : ''}>About</Link>
         </div>
     );
 }

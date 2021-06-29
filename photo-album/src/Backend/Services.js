@@ -35,8 +35,8 @@ export function deleteAllRequest() {
     });
 }
 
-export function deletePhotoRequest(index) {
-    return fetch('/photos/'+index, {method:'DELETE'}).then(response => {
+export function deletePhotoRequest(id) {
+    return fetch('/photos/'+id, {method:'DELETE'}).then(response => {
         if (response.ok){
             return response.json();
         }
