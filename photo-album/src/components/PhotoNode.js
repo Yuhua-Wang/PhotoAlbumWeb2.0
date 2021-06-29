@@ -29,6 +29,7 @@ export class PhotoNode extends Component {
                         url={this.props.url}
                         description={this.props.description}
                         date={this.state.data}
+                        editPhoto={this.props.editPhoto}
                         closePopup={this.handlePopup.bind(this)}
                     />
                 }
