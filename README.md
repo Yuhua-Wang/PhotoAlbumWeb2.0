@@ -23,9 +23,9 @@ cd photo-album
 ```
 Start the server:
 ```sh
-node src/Backend/Server.js
+npm run server
 ```
-Start the frontend in another terminal:
+Start the frontend in *another* terminal:
 ```sh
 npm start
 ```
