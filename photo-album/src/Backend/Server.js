@@ -19,7 +19,6 @@ let server = app.listen(PORT, function () {
     })
         .then(res=>console.log("server started on port: %s", port))
         .catch(err=>{console.log(err)});
-
 })
 
 // get all photos
