@@ -13,13 +13,13 @@ Technologies used in the project includes: React, Node.js, Express, MongoDB
 ![image](https://user-images.githubusercontent.com/45861466/123400445-59223b80-d5d8-11eb-88c8-2cee3d4606d9.png)
 
 ## Get Started
-Install necessary packages and libraries by:
-```sh
-npm install
-```
 Go to the project folder by:
 ```sh
 cd photo-album
+```
+Install necessary packages and libraries by:
+```sh
+npm install
 ```
 Start the server:
 ```sh
