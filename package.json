@@ -1,19 +1,50 @@
 {
-  "name": "c",
-  "description": "<img alt=\"Logo\" align=\"right\" src=\"https://create-react-app.dev/img/logo.svg\" width=\"20%\" />",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "photo-album",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.9",
+    "mongoose": "^5.13.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.4.3",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "cd photo-album && npm install && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Yuhua-Wang/PhotoAlbumWeb2.0.git"
+  "proxy": "http://localhost:5000/",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Yuhua-Wang/PhotoAlbumWeb2.0/issues"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "homepage": "https://github.com/Yuhua-Wang/PhotoAlbumWeb2.0#readme"
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
