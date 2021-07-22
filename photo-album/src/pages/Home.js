@@ -9,10 +9,7 @@ import {
     editPhotoRequest,
     getPhotosRequest,
     uploadPhotoRequest
-} from "../Backend/Services";
-
-// The mechanism for removing/adding components dynamically is inspired by:
-// https://blog.csdn.net/weixin_30760895/article/details/97354604
+} from "../Services";
 
 export class Home extends Component{
     state = {
