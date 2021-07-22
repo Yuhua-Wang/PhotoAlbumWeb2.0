@@ -1,6 +1,5 @@
 let express = require('express');
 let app = express();
-const PORT = process.env.PORT || 5000
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
@@ -11,6 +10,7 @@ const Photo = require('./Schemas');
 const DB_NAME = 'PhotoAlbum';
 const mongoURL = 'mongodb+srv://m001-student:m001-mongodb-basics@sandbox.uxphx.mongodb.net/' + DB_NAME +'?retryWrites=true&w=majority';
 
+const PORT = process.env.PORT || 5000
 let server = app.listen(PORT, function () {
     let host = server.address().address;
     let port = server.address().port;
