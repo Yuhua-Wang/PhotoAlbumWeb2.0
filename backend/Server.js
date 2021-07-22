@@ -25,7 +25,7 @@ let server = app.listen(PORT, function () {
 app.use(express.static(path.join(__dirname, 'photo-album/build')));
 
 app.get('/', (req, res)=>{
-    res.send('Hello');
+    res.sendFile(path.join(__dirname, 'photo-album/build/static/index.html'));
 })
 
 // get all photos
