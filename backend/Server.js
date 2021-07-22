@@ -22,7 +22,11 @@ let server = app.listen(PORT, function () {
         .catch(err=>{console.log(err)});
 })
 
-// app.use(express.static(path.join(__dirname, 'photo-album/build')));
+app.use(express.static(path.join(__dirname, 'photo-album/build')));
+
+app.get('/', (req, res)=>{
+    res.send('Hello');
+})
 
 // get all photos
 app.get('/photos', (req, res) => {
